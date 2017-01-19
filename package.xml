@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>radmap_preprocess</name>
+  <version>0.0.0</version>
+  <description>The radmap_preprocess package</description>
+  <maintainer email="brian.nemsick@gmail.com"> Brian Nemsick </maintainer>
+  <license> BSD </license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>velodyne_msgs</build_depend>
+  <build_depend>velodyne_pointcloud</build_depend>
+  <build_depend>rosbag</build_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>velodyne_msgs</run_depend>
+  <run_depend>velodyne_pointcloud</run_depend>
+  <run_depend>rosbag</run_depend>
+</package>
