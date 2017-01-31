@@ -12,7 +12,6 @@ def write_msg(input_bag, output_bag, topic, msg, stamp, t_start, t_end):
 	except:
 		return np.inf, np.inf, None
 
-
 # Output Bag
 radmap = rosbag.Bag('merged.bag', 'w')
 

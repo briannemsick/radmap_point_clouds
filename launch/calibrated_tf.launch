@@ -1,0 +1,13 @@
+<launch>
+    <!-- ground from matlab velodyne_calib.m-->
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_starboard_broadcaster" 
+        args="0 0 0 -0.0091 -0.0981 0 0.9951 velodyne_calib velodyne_starboard 100" />
+    
+    <!-- port from matlab -->
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_port_broadcaster" 
+        args="-0.1677 -2.5748 0.0368  0.0004 0.0126 0.9994 0.0328 velodyne_starboard velodyne_port 100" />
+
+    <!-- translation from specification, quaternion from estimated yaw rotation -->
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_calib_broadcaster" 
+    args="1.35 .20 -.12 0 0 -0.7071 0.7071 imu_link velodyne_calib  100" />
+</launch>
