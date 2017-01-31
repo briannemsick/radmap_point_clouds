@@ -6,7 +6,7 @@
 
 # Coordinate frame calibration
 1. velodyne_calib.m
-2. print_tf.m -> fill in calibrated_tf.launch
+2. fill in calibrated_tf.launch
 
 # Play the bags
 1. rosparam set use_sim_time true
