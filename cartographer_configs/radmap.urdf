@@ -22,31 +22,31 @@
     <color rgba="0.2 0.2 0.2 1" />
   </material>
 
-  <link name="imu_link">
+  <link name="novatel">
     <visual>
       <origin xyz="0.0 0.0 0.0" />
       <geometry>
-        <box size="0.06 0.04 0.02" />
+        <box size="0.0 0.0 0.0" />
       </geometry>
       <material name="orange" />
     </visual>
   </link>
 
-  <link name="horizontal_vlp16_link">
+  <link name="velodyne_starboard">
     <visual>
       <origin xyz="0.0 0.0 0.0" />
       <geometry>
-        <cylinder length="0.07" radius="0.05" />
+        <cylinder length="0.0" radius="0.0" />
       </geometry>
       <material name="gray" />
     </visual>
   </link>
 
-  <link name="vertical_vlp16_link">
+  <link name="velodyne_port">
     <visual>
       <origin xyz="0.0 0.0 0.0" />
       <geometry>
-        <cylinder length="0.07" radius="0.05" />
+        <cylinder length="0.0" radius="0.0" />
       </geometry>
       <material name="gray" />
     </visual>
@@ -54,21 +54,21 @@
 
   <link name="base_link" />
 
-  <joint name="imu_link_joint" type="fixed">
+  <joint name="novatel_joint" type="fixed">
     <parent link="base_link" />
-    <child link="imu_link" />
-    <origin xyz="0 0 0" rpy="3.1416 0 0" />
+    <child link="novatel" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
-  <joint name="horizontal_vlp16_link_joint" type="fixed">
+  <joint name="velodyne_starboard_joint" type="fixed">
     <parent link="base_link" />
-    <child link="horizontal_vlp16_link" />
-    <origin xyz="0.01 0. 0.19" rpy="0. -0.1745 3.1416" />
+    <child link="velodyne_starboard" />
+    <origin xyz="1.350 0.200 -0.120" rpy="-0.018 -0.197 -1.569" />
   </joint>
 
-  <joint name="vertical_vlp16_link_joint" type="fixed">
+  <joint name="velodyne_port_joint" type="fixed">
     <parent link="base_link" />
-    <child link="vertical_vlp16_link" />
-    <origin xyz="0.19 0. 0.04" rpy="0. 1.3963 0." />
+    <child link="velodyne_port" />
+    <origin xyz="-1.224 0.376 -0.070" rpy="0.031 0.197 1.506" />
   </joint>
 </robot>
