@@ -22,20 +22,23 @@ imu_yaml = yaml.load(subprocess.Popen(['rosbag', 'info', '--yaml', 'imu.bag'], s
 
 port = rosbag.Bag('pc2_port.bag').read_messages()
 starboard = rosbag.Bag('pc2_starboard.bag').read_messages()
-imu = rosbag.Bag('imu.bag').read_messages()
+imu = rosbag.Bag('imu.bag').read_messages(topics = ['/novatel_imu'])
+gps = rosbag.Bag('imu.bag').read_messages(topics = ['/novatel_fix'])
 
 # Initialize
-t = np.zeros(3, dtype = float)
+t = np.zeros(4, dtype = float)
 _, msg_p, t_p = port.next()
 _, msg_s, t_s = starboard.next()
 _, msg_i, t_i = imu.next()
+_, msg_g, t_g = gps.next()
 
 max_start_t = max(starboard_yaml['start'],port_yaml['start'],imu_yaml['start'])
 min_end_t = min(starboard_yaml['end'],port_yaml['end'],imu_yaml['end'])
 
 t[0] = t_p.to_sec()
-t[1]  = t_s.to_sec()
-t[2]  = t_i.to_sec()
+t[1] = t_s.to_sec()
+t[2] = t_i.to_sec()
+t[3] = t_g.to_sec()
 
 while not np.all((t == np.inf)):
 	bag_id = np.argmin(t)
@@ -47,6 +50,9 @@ while not np.all((t == np.inf)):
 	
 	elif bag_id == 2:
 		t[2],t_i,msg_i = write_msg(imu,radmap,'imu',msg_i,t_i, max_start_t,min_end_t)
+
+	elif bag_id == 3:
+		t[3],t_g,msg_g = write_msg(gps,radmap,'gps',msg_g,t_g, max_start_t,min_end_t)
 
 
 radmap.close()
