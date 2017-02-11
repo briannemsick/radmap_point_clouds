@@ -1,10 +1,15 @@
-The following tools do the preprocessing of the RadMAP system for cartographer: converting velodyne_msgs/VelodyneScan --> sensor_msgs/PointCloud2, merging {sensor_msgs/PointCloud2,sensor_msgs/Imu,sensor_msgs/NavSatFix} bags, and aligning 2 velodynes. 
+The following tools do the preprocessing of the RadMAP system for cartographer:
+1. converting velodyne_msgs/VelodyneScan --> sensor_msgs/PointCloud2
+2. merging {sensor_msgs/PointCloud2,sensor_msgs/Imu,sensor_msgs/NavSatFix}
+3. SE3 aligning 2 velodynes. 
 
 The bagfile names are assumed to be {port,starboard,imu}.bag with the appropriate topic names {/novatel_fix,/novatel_imu,/velodyne_packets_port, /velodyne_packets_starboard}.
 
 Requirements:
-https://github.com/ros-drivers/velodyne
-https://github.com/googlecartographer/cartographer_ros
+
+1. https://github.com/ros-drivers/velodyne
+
+2. https://github.com/googlecartographer/cartographer_ros
 
 # Merging the bags
 1. Place port.bag, starboard.bag, imu.bag into [folder]
