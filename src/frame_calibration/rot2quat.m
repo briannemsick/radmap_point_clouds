@@ -1,9 +1,4 @@
-% Q = ROT2QUAT( R )
-%
-% This function decomposes a rotation matrix into its quaterion
 function q = rot2quat(R)
-
-% Do the decomposition depending on pivot
 T = trace(R);
 q = zeros(4,1);
 if(T > 0)
@@ -31,5 +26,4 @@ else
    q(2) = (R(3,2) + R(2,3)) / S;
    q(3) = 1/4*S;
 end
-
 end

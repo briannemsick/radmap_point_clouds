@@ -15,7 +15,7 @@
 // velodyne_msgs/VelodyneScan -> pointcloud2
 void scan2cloud(const std::string &bag_name, const std::string &input_topic,
 				const std::string &output_topic, ros::NodeHandle private_nh,
-				const double &min_range = 3.0, const double &max_range = 130, 
+				const double &min_range = 7.5, const double &max_range = 120, 
  				const double &view_direction = 0.0, const double &view_width = 2*M_PI){
 	
 	//data_(new velodyne_rawdata::RawData());
