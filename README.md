@@ -4,6 +4,7 @@ The bagfile names are assumed to be {port,starboard,imu}.bag with the appropriat
 
 Requirements:
 https://github.com/ros-drivers/velodyne
+https://github.com/googlecartographer/cartographer_ros
 
 # Merging the bags
 1. Place port.bag, starboard.bag, imu.bag into [folder]
@@ -18,6 +19,7 @@ https://github.com/ros-drivers/velodyne
 3. rviz
 
 # Run cartographer
+1. Place configuration files in /params/cartographer_configs in their corresponding cartographer_ros folders
 1. roslaunch cartographer_ros demo_radmap.launch bag_filename:=[bagfile path]
 2. rosservice call /finish_trajectory [name]
 3. cd ~/.ros -> [name].ply, [name]_xray_{X,Y,Z}.png
