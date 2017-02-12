@@ -1,0 +1,11 @@
+<launch>
+  <node name="cartographer_assets_writer" pkg="cartographer_ros" required="true"
+      type="cartographer_assets_writer" args="
+          -configuration_directory $(find cartographer_ros)/configuration_files
+          -configuration_basename assets_writer_radmap.lua
+          -urdf_filename $(find cartographer_ros)/urdf/radmap.urdf
+          -bag_filename $(arg bag_filenames)
+          -trajectory_filename $(arg trajectory_filename)"
+      output="screen">
+  </node>
+</launch>
