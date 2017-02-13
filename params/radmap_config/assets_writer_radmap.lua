@@ -4,7 +4,6 @@
 -- reduce this by writing fewer X-Rays or upping VOXEL_SIZE - which is the size
 -- of a pixel in a X-Ray.
 VOXEL_SIZE = 5e-2
-sampling_ratio = 0.05
 
 XY_TRANSFORM =  {
   translation = { 0., 0., 0. },
@@ -26,7 +25,7 @@ options = {
   pipeline = {
     {
       action = "fixed_ratio_sampler",
-      sampling_ratio = 0.1,
+      sampling_ratio = 0.3,
     },
     {
       action = "min_max_range_filter",
@@ -35,7 +34,7 @@ options = {
     },
     {
        action = "voxel_filter_and_remove_moving_objects",
-       voxel_size = 5e-1,
+       voxel_size = .05,
     },
     {
        action = "dump_num_points",

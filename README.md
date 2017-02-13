@@ -27,7 +27,7 @@ Requirements:
 3. rviz
 
 # Run cartographer
-1. Place configuration files in /params/cartographer_configs in their corresponding cartographer_ros folders
+1. copy params/radmap_config to cartographer/[dev branch]/share/cartographer_ros/radmap_config
 2. roslaunch cartographer_ros demo_radmap.launch bag_filename:=[bagfile path]
 3. rosservice call /finish_trajectory [name]
 4. roslaunch cartographer_ros assets_writer_radmap.launch bag_filenames:=$[bagfile path] trajectory_filename:=/home/[user]/.ros/[name]
