@@ -1,3 +1,6 @@
+![Alt text](relative/path/to/img.jpg?raw=true "Title")
+
+
 The following tools do the preprocessing of the RadMAP system for cartographer:
 
 1. converting velodyne_msgs/VelodyneScan --> sensor_msgs/PointCloud2
@@ -14,14 +17,13 @@ Requirements:
 
 2. https://github.com/googlecartographer/cartographer_ros
 
+3. http://www.cloudcompare.org/release/
 
 Recommendations (add to .bashrc)
 
 1. export RADMAP="/home/[user]/radmap/internal/src/radmap_preprocess/bagfiles"
 
 2. source /home/[user]/radmap/internal/devel/setup.bash
-
-Point Cloud Viewer - CloudCompare
 
 # Merging the bags
 1. Place port.bag, starboard.bag, imu.bag into [folder]
@@ -37,12 +39,12 @@ Point Cloud Viewer - CloudCompare
 4. roslaunch cartographer_ros assets_writer_radmap.launch bag_filenames:=${RADMAP}/[bagfile] trajectory_filename:=/home/[user]/.ros/[name]
 5. cd /home/[user]/ --> CloudCompare --> visualize points.ply
 
-# Vizualize aligned scans
+# (Optional) Vizualize aligned scans
 1. roslaunch radmap_preprocess calibrated_tf.launch
 2. rosbag play [bagfile]
 3. rviz
 
-# Coordinate frame calibration
+# (Optional) Coordinate frame calibration
 1. velodyne_calib.m
 2. fill in calibrated_tf.launch
 3. roslaunch radmap_preprocess calibrated_tf.launch
