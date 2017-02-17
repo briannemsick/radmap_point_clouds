@@ -1,4 +1,4 @@
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Alt text](example_cloud.png?raw=true "Title")
 
 
 The following tools do the preprocessing of the RadMAP system for cartographer:
