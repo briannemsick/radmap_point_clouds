@@ -1,4 +1,4 @@
-![Alt text](example_cloud.png?raw=true "Title")
+![Alt text](images/example_cloud.png?raw=true "Title")
 
 
 The following tools do the preprocessing of the RadMAP system for cartographer:
@@ -43,6 +43,9 @@ Recommendations (add to .bashrc)
 1. roslaunch radmap_preprocess calibrated_tf.launch
 2. rosbag play [bagfile]
 3. rviz
+
+![Alt text](images/coord_frames.png?raw=true "Title")
+![Alt text](images/aligned_scans.png?raw=true "Title")
 
 # (Optional) Coordinate frame calibration
 1. velodyne_calib.m
