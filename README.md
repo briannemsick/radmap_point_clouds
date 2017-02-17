@@ -44,8 +44,8 @@ Recommendations (add to .bashrc)
 2. rosbag play [bagfile]
 3. rviz
 
-![Alt text](images/coord_frames.png?raw=true "Title")
 ![Alt text](images/aligned_scans.png?raw=true "Title")
+![Alt text](images/coord_frames.png?raw=true "Title")
 
 # (Optional) Coordinate frame calibration
 1. velodyne_calib.m
