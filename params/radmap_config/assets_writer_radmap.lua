@@ -29,12 +29,12 @@ options = {
     },
     {
       action = "min_max_range_filter",
-      min_range = 1.,
+      min_range = 8.25,
       max_range = 150.,
     },
     {
        action = "voxel_filter_and_remove_moving_objects",
-       voxel_size = .05,
+       voxel_size = VOXEL_SIZE,
     },
     {
        action = "dump_num_points",
