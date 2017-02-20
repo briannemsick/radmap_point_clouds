@@ -51,8 +51,8 @@ Recommendations (add to .bashrc):
 # (Optional) Vizualize aligned scans
 1. roslaunch radmap_point_clouds calibrated_tf.launch
 2. rosbag play [bagfile]
-3. rviz
-4. Open rviz/aligned_scans
+3. rviz -d  $RADMAP/.rviz/aligned_scans.rviz
+
 
 ![Alt text](images/aligned_scans.png?raw=true "Title")
 ![Alt text](images/coord_frames.png?raw=true "Title")
