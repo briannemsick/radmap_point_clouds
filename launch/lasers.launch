@@ -1,7 +1,7 @@
 <launch>
   <arg name="port" default="port.bag" />
   <arg name="starboard" default="starboard.bag" />
-  <param name="/lasers/calibration" value="$(find radmap_preprocess)/params/radmap.yaml" />
+  <param name="/lasers/calibration" value="$(find radmap_point_clouds)/params/radmap.yaml" />
   <param name="port_bag" value="$(arg port)"/>
   <param name="starboard_bag" value="$(arg starboard)"/>
 </launch>

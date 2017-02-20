@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(radmap_preprocess)
+project(radmap_point_clouds)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -25,4 +25,4 @@ include_directories(
 
 add_executable(lasers src/lasers.cpp)
 target_link_libraries(lasers ${catkin_LIBRARIES})
-add_dependencies(lasers radmap_preprocess_generate_messages_cpp)
+add_dependencies(lasers radmap_point_clouds_generate_messages_cpp)

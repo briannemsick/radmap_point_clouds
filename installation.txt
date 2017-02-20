@@ -1,0 +1,12 @@
+# Installation
+1 cd ~
+2. mkdir radmap
+3. cd radmap
+4. mkdir internal
+5. cd internal
+6. mkdir src
+7. cd src
+8. git clone https://github.com/briannemsick/radmap_preprocessing.git
+9. git clone https://github.com/ros-drivers/velodyne.git
+10. cd ..
+11. catkin_make
