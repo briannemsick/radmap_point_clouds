@@ -7,15 +7,15 @@ The radmap_point_clouds packages does the following:
 
 2. merges {sensor_msgs/PointCloud2,sensor_msgs/Imu,sensor_msgs/NavSatFix}
 
-3. Aligns 2 velodynes in SE3 (rotation and translation). 
+3. Aligns 2 velodynes in SE3 (rotation and translation)
 
 4. Provides {.lua,.launch,.urdf} configuration files for cartographer
 
 Notes:
 
-1. See installation.txt for step by step guide to build this package.
+1. See installation.txt for step by step guide to build this package
 
-2. The bagfile names are assumed to be {port,starboard,imu}.bag with the appropriate topic names {/novatel_fix,/novatel_imu,/velodyne_packets_port, /velodyne_packets_starboard}.
+2. The bagfile names are assumed to be {port,starboard,imu}.bag with the appropriate topic names {/novatel_fix,/novatel_imu,/velodyne_packets_port, /velodyne_packets_starboard}
 
 Requirements:
 
