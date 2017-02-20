@@ -45,7 +45,7 @@ Recommendations (add to .bashrc):
 1. copy params/radmap_config to cartographer/[dev branch]/share/cartographer_ros/radmap_config
 2. roslaunch cartographer_ros demo_radmap.launch bag_filename:=${RADBAGS}/[bagfile]
 3. rosservice call /finish_trajectory [name]
-4. roslaunch cartographer_ros assets_writer_radmap.launch bag_filenames:=${RADBAGS}/[bagfile] trajectory_filename:=/home/[user]/.ros/[name]
+4. roslaunch cartographer_ros assets_writer_radmap.launch bag_filenames:=${RADBAGS}/[bagfile] trajectory_filename:=/home/[user]/.ros/[name].pb
 5. cd /home/[user]/ --> CloudCompare --> visualize points.ply
 
 # (Optional) Vizualize aligned scans
