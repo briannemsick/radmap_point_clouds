@@ -23,15 +23,8 @@ MAP_BUILDER.sparse_pose_graph.constraint_builder.max_constraint_distance = 100 -
 assets_writer_radmap.lua
 
 VOXEL_SIZE = 5e-2 -- voxel filter size
-pipeline = {
-    {
-      action = "fixed_ratio_sampler",
-      sampling_ratio = 0.3, -- downsample to 30%
-    },
-    {
-      action = "min_max_range_filter",
-      min_range = 8.25, -- min lidar range (removes truck)
-      max_range = 150., -- max lidar range
-    }
+sampling_ratio = 0.3, -- downsample to 30%
+min_range = 8.25, -- min lidar range (removes truck)
+max_range = 150., -- max lidar range
     
 
